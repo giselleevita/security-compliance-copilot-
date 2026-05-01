@@ -1,0 +1,128 @@
+[
+  {
+    "title": "Artificial Intelligence Risk Management Framework (AI RMF 1.0)",
+    "url": "https://nvlpubs.nist.gov/nistpubs/ai/nist.ai.100-1.pdf",
+    "output_path": "/Users/yusaf/RAG AGATA/data/raw/nist_ai_rmf_1_0.pdf",
+    "status": "already_present",
+    "bytes": 1946127
+  },
+  {
+    "title": "NIST AI RMF Playbook",
+    "url": "https://airc.nist.gov/airmf-resources/playbook/",
+    "output_path": "/Users/yusaf/RAG AGATA/data/raw/nist_ai_rmf_playbook.html",
+    "status": "already_present",
+    "bytes": 33140
+  },
+  {
+    "title": "Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile",
+    "url": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf",
+    "output_path": "/Users/yusaf/RAG AGATA/data/raw/nist_ai_rmf_genai_profile_600_1.pdf",
+    "status": "already_present",
+    "bytes": 1174643
+  },
+  {
+    "title": "Adversarial Machine Learning: A Taxonomy and Terminology of Attacks and Mitigations",
+    "url": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-2e2025.pdf",
+    "output_path": "/Users/yusaf/RAG AGATA/data/raw/nist_adversarial_ml_taxonomy_100_2e2025.pdf",
+    "status": "already_present",
+    "bytes": 1964469
+  },
+  {
+    "title": "Secure Software Development Practices for Generative AI and Dual-Use Foundation Models",
+    "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-218A.pdf",
+    "output_path": "/Users/yusaf/RAG AGATA/data/raw/nist_sp_800_218a_genai_ssdf_profile.pdf",
+    "status": "already_present",
+    "bytes": 650661
+  },
+  {
+    "title": "Secure Software Development Framework (SSDF) Version 1.1: Recommendations for Mitigating the Risk of Software Vulnerabilities",
+    "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-218.pdf",
+    "output_path": "/Users/yusaf/RAG AGATA/data/raw/nist_sp_800_218_ssdf_v1_1.pdf",
+    "status": "already_present",
+    "bytes": 739891
+  },
+  {
+    "title": "The NIST Cybersecurity Framework (CSF) 2.0",
+    "url": "https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.29.pdf",
+    "output_path": "/Users/yusaf/RAG AGATA/data/raw/nist_csf_2_0.pdf",
+    "status": "already_present",
+    "bytes": 1518858
+  },
+  {
+    "title": "NIST Cybersecurity Framework 2.0: Resource & Overview Guide",
+    "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.1299.pdf",
+    "output_path": "/Users/yusaf/RAG AGATA/data/raw/nist_sp_1299_csf_resource_overview_guide.pdf",
+    "status": "already_present",
+    "bytes": 2235190
+  },
+  {
+    "title": "Privacy Framework: A Tool for Improving Privacy through Enterprise Risk Management",
+    "url": "https://www.nist.gov/privacy-framework/privacy-framework",
+    "output_path": "/Users/yusaf/RAG AGATA/data/raw/nist_privacy_framework_v1_0.html",
+    "status": "already_present",
+    "bytes": 91886
+  },
+  {
+    "title": "NISTIR 8062: An Introduction to Privacy Engineering and Risk Management in Federal Systems",
+    "url": "https://nvlpubs.nist.gov/nistpubs/ir/2017/NIST.IR.8062.pdf",
+    "output_path": "/Users/yusaf/RAG AGATA/data/raw/nistir_8062_privacy_engineering_risk_management.pdf",
+    "status": "already_present",
+    "bytes": 4116793
+  },
+  {
+    "title": "Reducing Risks Posed by Synthetic Content: An Overview of Technical Approaches to Digital Content Transparency",
+    "url": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-4.pdf",
+    "output_path": "/Users/yusaf/RAG AGATA/data/raw/nist_ai_100_4_synthetic_content_transparency.pdf",
+    "status": "already_present",
+    "bytes": 4306208
+  },
+  {
+    "title": "Deploying AI Systems Securely",
+    "url": "https://www.cisa.gov/news-events/alerts/2024/04/15/joint-guidance-deploying-ai-systems-securely",
+    "output_path": "/Users/yusaf/RAG AGATA/data/raw/deploying_ai_systems_securely_joint_csi.html",
+    "status": "fetched",
+    "bytes": 54382
+  },
+  {
+    "title": "AI Data Security: Best Practices for Securing Data Used to Train & Operate AI Systems",
+    "url": "https://www.cisa.gov/resources-tools/resources/ai-data-security-best-practices-securing-data-used-train-operate-ai-systems",
+    "output_path": "/Users/yusaf/RAG AGATA/data/raw/ai_data_security_best_practices_joint_csi.html",
+    "status": "fetched",
+    "bytes": 55189
+  },
+  {
+    "title": "Engaging with Artificial Intelligence (AI)",
+    "url": "https://www.cisa.gov/news-events/alerts/2024/01/23/cisa-joins-acsc-led-guidance-how-use-ai-systems-securely",
+    "output_path": "/Users/yusaf/RAG AGATA/data/raw/engaging_with_artificial_intelligence_joint_guidance.html",
+    "status": "fetched",
+    "bytes": 59772
+  },
+  {
+    "title": "Guidelines for Secure AI System Development",
+    "url": "https://www.cisa.gov/news-events/alerts/2023/11/26/cisa-and-uk-ncsc-unveil-joint-guidelines-secure-ai-system-development",
+    "output_path": "/Users/yusaf/RAG AGATA/data/raw/guidelines_for_secure_ai_system_development.html",
+    "status": "fetched",
+    "bytes": 60544
+  },
+  {
+    "title": "Cross-Sector Cybersecurity Performance Goals",
+    "url": "https://www.cisa.gov/cybersecurity-performance-goals",
+    "output_path": "/Users/yusaf/RAG AGATA/data/raw/cisa_cross_sector_cpgs.html",
+    "status": "already_present",
+    "bytes": 72182
+  },
+  {
+    "title": "Secure-by-Design: Shifting the Balance of Cybersecurity Risk: Principles and Approaches for Secure by Design Software",
+    "url": "https://www.cisa.gov/resources-tools/resources/secure-by-design",
+    "output_path": "/Users/yusaf/RAG AGATA/data/raw/cisa_secure_by_design.html",
+    "status": "already_present",
+    "bytes": 59878
+  },
+  {
+    "title": "Product Security Bad Practices",
+    "url": "https://www.cisa.gov/resources-tools/resources/product-security-bad-practices",
+    "output_path": "/Users/yusaf/RAG AGATA/data/raw/cisa_product_security_bad_practices.html",
+    "status": "already_present",
+    "bytes": 88266
+  }
+]

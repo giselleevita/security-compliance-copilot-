@@ -1,0 +1,202 @@
+{
+  "accepted_documents": [
+    {
+      "title": "Artificial Intelligence Risk Management Framework (AI RMF 1.0)",
+      "url": "https://nvlpubs.nist.gov/nistpubs/ai/nist.ai.100-1.pdf",
+      "publisher": "NIST",
+      "document_type": "framework",
+      "framework": "NIST_AI_RMF",
+      "license_status": "government_publication",
+      "priority": "high",
+      "content_format": "pdf",
+      "suggested_filename": "nist_ai_rmf_1_0.pdf"
+    },
+    {
+      "title": "NIST AI RMF Playbook",
+      "url": "https://airc.nist.gov/airmf-resources/playbook/",
+      "publisher": "NIST",
+      "document_type": "playbook",
+      "framework": "NIST_AI_RMF",
+      "license_status": "government_publication",
+      "priority": "high",
+      "content_format": "html",
+      "suggested_filename": "nist_ai_rmf_playbook.html"
+    },
+    {
+      "title": "Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile",
+      "url": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf",
+      "publisher": "NIST",
+      "document_type": "profile",
+      "framework": "NIST_AI_RMF",
+      "license_status": "government_publication",
+      "priority": "high",
+      "content_format": "pdf",
+      "suggested_filename": "nist_ai_rmf_genai_profile_600_1.pdf"
+    },
+    {
+      "title": "Adversarial Machine Learning: A Taxonomy and Terminology of Attacks and Mitigations",
+      "url": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-2e2025.pdf",
+      "publisher": "NIST",
+      "document_type": "guide",
+      "framework": "NIST_AI_RMF",
+      "license_status": "government_publication",
+      "priority": "high",
+      "content_format": "pdf",
+      "suggested_filename": "nist_adversarial_ml_taxonomy_100_2e2025.pdf"
+    },
+    {
+      "title": "Secure Software Development Practices for Generative AI and Dual-Use Foundation Models",
+      "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-218A.pdf",
+      "publisher": "NIST",
+      "document_type": "guide",
+      "framework": "other",
+      "license_status": "government_publication",
+      "priority": "high",
+      "content_format": "pdf",
+      "suggested_filename": "nist_sp_800_218a_genai_ssdf_profile.pdf"
+    },
+    {
+      "title": "Secure Software Development Framework (SSDF) Version 1.1: Recommendations for Mitigating the Risk of Software Vulnerabilities",
+      "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-218.pdf",
+      "publisher": "NIST",
+      "document_type": "framework",
+      "framework": "other",
+      "license_status": "government_publication",
+      "priority": "high",
+      "content_format": "pdf",
+      "suggested_filename": "nist_sp_800_218_ssdf_v1_1.pdf"
+    },
+    {
+      "title": "The NIST Cybersecurity Framework (CSF) 2.0",
+      "url": "https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.29.pdf",
+      "publisher": "NIST",
+      "document_type": "framework",
+      "framework": "NIST_CSF",
+      "license_status": "government_publication",
+      "priority": "high",
+      "content_format": "pdf",
+      "suggested_filename": "nist_csf_2_0.pdf"
+    },
+    {
+      "title": "NIST Cybersecurity Framework 2.0: Resource & Overview Guide",
+      "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.1299.pdf",
+      "publisher": "NIST",
+      "document_type": "guide",
+      "framework": "NIST_CSF",
+      "license_status": "government_publication",
+      "priority": "medium",
+      "content_format": "pdf",
+      "suggested_filename": "nist_sp_1299_csf_resource_overview_guide.pdf"
+    },
+    {
+      "title": "Privacy Framework: A Tool for Improving Privacy through Enterprise Risk Management",
+      "url": "https://www.nist.gov/privacy-framework/privacy-framework",
+      "publisher": "NIST",
+      "document_type": "framework",
+      "framework": "other",
+      "license_status": "government_publication",
+      "priority": "medium",
+      "content_format": "html",
+      "suggested_filename": "nist_privacy_framework_v1_0.html"
+    },
+    {
+      "title": "NISTIR 8062: An Introduction to Privacy Engineering and Risk Management in Federal Systems",
+      "url": "https://nvlpubs.nist.gov/nistpubs/ir/2017/NIST.IR.8062.pdf",
+      "publisher": "NIST",
+      "document_type": "guide",
+      "framework": "other",
+      "license_status": "government_publication",
+      "priority": "medium",
+      "content_format": "pdf",
+      "suggested_filename": "nistir_8062_privacy_engineering_risk_management.pdf"
+    },
+    {
+      "title": "Reducing Risks Posed by Synthetic Content: An Overview of Technical Approaches to Digital Content Transparency",
+      "url": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-4.pdf",
+      "publisher": "NIST",
+      "document_type": "guide",
+      "framework": "NIST_AI_RMF",
+      "license_status": "government_publication",
+      "priority": "medium",
+      "content_format": "pdf",
+      "suggested_filename": "nist_ai_100_4_synthetic_content_transparency.pdf"
+    },
+    {
+      "title": "Deploying AI Systems Securely",
+      "url": "https://www.cisa.gov/news-events/alerts/2024/04/15/joint-guidance-deploying-ai-systems-securely",
+      "publisher": "NSA / CISA / FBI and partners",
+      "document_type": "guide",
+      "framework": "CISA",
+      "license_status": "government_publication",
+      "priority": "high",
+      "content_format": "html",
+      "suggested_filename": "deploying_ai_systems_securely_joint_csi.html"
+    },
+    {
+      "title": "AI Data Security: Best Practices for Securing Data Used to Train & Operate AI Systems",
+      "url": "https://www.cisa.gov/resources-tools/resources/ai-data-security-best-practices-securing-data-used-train-operate-ai-systems",
+      "publisher": "NSA / CISA / FBI and partners",
+      "document_type": "guide",
+      "framework": "CISA",
+      "license_status": "government_publication",
+      "priority": "high",
+      "content_format": "html",
+      "suggested_filename": "ai_data_security_best_practices_joint_csi.html"
+    },
+    {
+      "title": "Engaging with Artificial Intelligence (AI)",
+      "url": "https://www.cisa.gov/news-events/alerts/2024/01/23/cisa-joins-acsc-led-guidance-how-use-ai-systems-securely",
+      "publisher": "CISA / NSA / FBI with international partners",
+      "document_type": "guide",
+      "framework": "CISA",
+      "license_status": "government_publication",
+      "priority": "high",
+      "content_format": "html",
+      "suggested_filename": "engaging_with_artificial_intelligence_joint_guidance.html"
+    },
+    {
+      "title": "Guidelines for Secure AI System Development",
+      "url": "https://www.cisa.gov/news-events/alerts/2023/11/26/cisa-and-uk-ncsc-unveil-joint-guidelines-secure-ai-system-development",
+      "publisher": "CISA / NSA / FBI with international partners",
+      "document_type": "guide",
+      "framework": "CISA",
+      "license_status": "government_publication",
+      "priority": "high",
+      "content_format": "html",
+      "suggested_filename": "guidelines_for_secure_ai_system_development.html"
+    },
+    {
+      "title": "Cross-Sector Cybersecurity Performance Goals",
+      "url": "https://www.cisa.gov/cybersecurity-performance-goals",
+      "publisher": "CISA",
+      "document_type": "guide",
+      "framework": "CISA",
+      "license_status": "government_publication",
+      "priority": "medium",
+      "content_format": "html",
+      "suggested_filename": "cisa_cross_sector_cpgs.html"
+    },
+    {
+      "title": "Secure-by-Design: Shifting the Balance of Cybersecurity Risk: Principles and Approaches for Secure by Design Software",
+      "url": "https://www.cisa.gov/resources-tools/resources/secure-by-design",
+      "publisher": "CISA",
+      "document_type": "guide",
+      "framework": "CISA",
+      "license_status": "government_publication",
+      "priority": "high",
+      "content_format": "html",
+      "suggested_filename": "cisa_secure_by_design.html"
+    },
+    {
+      "title": "Product Security Bad Practices",
+      "url": "https://www.cisa.gov/resources-tools/resources/product-security-bad-practices",
+      "publisher": "CISA",
+      "document_type": "guide",
+      "framework": "CISA",
+      "license_status": "government_publication",
+      "priority": "medium",
+      "content_format": "html",
+      "suggested_filename": "cisa_product_security_bad_practices.html"
+    }
+  ]
+}

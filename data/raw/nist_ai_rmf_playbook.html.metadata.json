@@ -1,0 +1,13 @@
+{
+  "title": "NIST AI RMF Playbook",
+  "url": "https://airc.nist.gov/airmf-resources/playbook/",
+  "publisher": "NIST",
+  "framework": "NIST_AI_RMF",
+  "source_type": "html",
+  "document_type": "playbook",
+  "license_status": "government_publication",
+  "priority": "high",
+  "content_format": "html",
+  "fetched_at": "2026-04-27T12:50:56.720537+00:00",
+  "local_path": "/Users/yusaf/RAG AGATA/data/raw/nist_ai_rmf_playbook.html"
+}

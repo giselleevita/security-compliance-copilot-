@@ -1,0 +1,13 @@
+{
+  "title": "NIST Cybersecurity Framework 2.0: Resource & Overview Guide",
+  "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.1299.pdf",
+  "publisher": "NIST",
+  "framework": "NIST_CSF",
+  "source_type": "pdf",
+  "document_type": "guide",
+  "license_status": "government_publication",
+  "priority": "medium",
+  "content_format": "pdf",
+  "fetched_at": "2026-04-27T12:52:16.961983+00:00",
+  "local_path": "/Users/yusaf/RAG AGATA/data/raw/nist_sp_1299_csf_resource_overview_guide.pdf"
+}

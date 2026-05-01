@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Security & Compliance Copilot</title>
+    <style>
+      :root {
+        --bg: #f5f7f8;
+        --surface: #ffffff;
+        --surface-soft: #fafbfc;
+        --text: #18212c;
+        --text-muted: #5a6676;
+        --border: #d8e0e7;
+        --accent: #1f5568;
+        --accent-soft: #e8f1f4;
+        --danger: #8f2f2f;
+        --warning: #945f1a;
+        --ok: #2e6a4d;
+        --shadow-sm: 0 1px 2px rgba(16, 24, 40, 0.05);
+        --shadow-md: 0 8px 24px rgba(16, 24, 40, 0.06);
+        --radius-md: 10px;
+        --radius-lg: 14px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        height: 100%;
+      }
+
+      body {
+        font-family: Inter, "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+        color: var(--text);
+        background: var(--bg);
+      }
+
+      .app-shell {
+        min-height: 100vh;
+        display: grid;
+        grid-template-rows: auto 1fr;
+      }
+
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        border-bottom: 1px solid var(--border);
+        background: rgba(245, 247, 248, 0.94);
+        backdrop-filter: blur(4px);
+      }
+
+      .topbar-inner {
+        max-width: 1240px;
+        margin: 0 auto;
+        padding: 16px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+      }
+
+      .brand h1 {
+        margin: 0;
+        font-size: 1.08rem;
+        font-weight: 650;
+        letter-spacing: 0.01em;
+      }
+
+      .brand p {
+        margin: 4px 0 0;
+        color: var(--text-muted);
+        font-size: 0.88rem;
+      }
+
+      .topbar-meta {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        border: 1px solid var(--border);
+        background: var(--surface);
+        border-radius: 999px;
+        min-height: 30px;
+        padding: 0 10px;
+        font-size: 0.8rem;
+        color: var(--text-muted);
+        white-space: nowrap;
+      }
+
+      .chip-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 999px;
+        background: var(--ok);
+      }
+
+      .layout {
+        max-width: 1240px;
+        margin: 0 auto;
+        width: 100%;
+        padding: 20px;
+        display: grid;
+        grid-template-columns: minmax(260px, 300px) minmax(0, 1fr);
+        gap: 18px;
+      }
+
+      .sidebar {
+        display: grid;
+        gap: 12px;
+        align-content: start;
+      }
+
+      .card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-md);
+        box-shadow: var(--shadow-sm);
+        padding: 14px;
+      }
+
+      .card h2 {
+        margin: 0 0 8px;
+        font-size: 0.83rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--text-muted);
+      }
+
+      .card p,
+      .card li {
+        margin: 0;
+        color: var(--text);
+        font-size: 0.92rem;
+        line-height: 1.45;
+      }
+
+      .card ul {
+        margin: 0;
+        padding-left: 17px;
+        display: grid;
+        gap: 8px;
+      }
+
+      .prompt-grid {
+        display: grid;
+        gap: 8px;
+      }
+
+      .prompt-chip {
+        width: 100%;
+        text-align: left;
+        border: 1px solid var(--border);
+        background: var(--surface-soft);
+        color: var(--text);
+        border-radius: 8px;
+        padding: 10px 11px;
+        font-size: 0.86rem;
+        line-height: 1.3;
+        cursor: pointer;
+        transition: border-color 120ms ease, background 120ms ease;
+      }
+
+      .prompt-chip:hover {
+        border-color: #b7c5d2;
+        background: #f4f7f9;
+      }
+
+      .workspace {
+        min-height: 0;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow-md);
+        display: grid;
+        grid-template-rows: 1fr auto;
+        overflow: hidden;
+      }
+
+      .conversation {
+        padding: 20px;
+        overflow-y: auto;
+        display: grid;
+        gap: 14px;
+        align-content: start;
+      }
+
+      .empty-state {
+        border: 1px dashed #c9d4de;
+        border-radius: 12px;
+        background: var(--surface-soft);
+        padding: 22px;
+      }
+
+      .empty-state h3 {
+        margin: 0;
+        font-size: 1rem;
+      }
+
+      .empty-state p {
+        margin: 8px 0 0;
+        color: var(--text-muted);
+        font-size: 0.92rem;
+        max-width: 66ch;
+      }
+
+      .empty-prompts {
+        margin-top: 14px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .empty-prompts button {
+        border: 1px solid var(--border);
+        background: var(--surface);
+        color: var(--text);
+        border-radius: 999px;
+        padding: 7px 11px;
+        font-size: 0.83rem;
+        cursor: pointer;
+      }
+
+      .message {
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        background: #fff;
+        padding: 14px;
+      }
+
+      .message.user {
+        background: #f4f7fa;
+      }
+
+      .message-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 10px;
+        margin-bottom: 9px;
+      }
+
+      .message-role {
+        font-size: 0.78rem;
+        font-weight: 620;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--text-muted);
+      }
+
+      .message-meta {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+
+      .status-pill {
+        font-size: 0.76rem;
+        border: 1px solid var(--border);
+        background: var(--surface-soft);
+        color: var(--text-muted);
+        border-radius: 999px;
+        padding: 4px 8px;
+      }
+
+      .status-pill.ok {
+        color: var(--ok);
+        border-color: #c6dfd1;
+        background: #f4faf6;
+      }
+
+      .status-pill.warn {
+        color: var(--warning);
+        border-color: #ead6b6;
+        background: #fff9f0;
+      }
+
+      .status-pill.error {
+        color: var(--danger);
+        border-color: #e8c7c7;
+        background: #fff6f6;
+      }
+
+      .answer-text {
+        white-space: pre-wrap;
+        line-height: 1.65;
+        font-size: 0.95rem;
+        color: #17222d;
+      }
+
+      .sources-block {
+        margin-top: 14px;
+        border-top: 1px solid #e9eef3;
+        padding-top: 12px;
+      }
+
+      .sources-title {
+        margin: 0 0 10px;
+        color: var(--text-muted);
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+
+      .sources-grid {
+        display: grid;
+        gap: 9px;
+      }
+
+      .source-card {
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        padding: 10px 11px;
+        background: #fcfdfd;
+        transition: border-color 120ms ease, box-shadow 120ms ease;
+      }
+
+      .source-card:hover {
+        border-color: #bbc9d4;
+        box-shadow: var(--shadow-sm);
+      }
+
+      .source-top {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+      }
+
+      .source-label {
+        min-width: 34px;
+        text-align: center;
+        border-radius: 999px;
+        border: 1px solid #bfd2dc;
+        background: var(--accent-soft);
+        color: var(--accent);
+        font-size: 0.75rem;
+        font-weight: 620;
+        padding: 3px 7px;
+      }
+
+      .source-title {
+        font-size: 0.9rem;
+        font-weight: 580;
+        color: var(--text);
+      }
+
+      .source-meta {
+        margin-top: 6px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px 12px;
+        color: var(--text-muted);
+        font-size: 0.8rem;
+      }
+
+      .source-link {
+        margin-top: 6px;
+        display: inline-block;
+        color: var(--accent);
+        font-size: 0.8rem;
+        text-decoration: none;
+      }
+
+      .source-link:hover {
+        text-decoration: underline;
+      }
+
+      .composer-wrap {
+        border-top: 1px solid var(--border);
+        background: rgba(255, 255, 255, 0.94);
+        backdrop-filter: blur(4px);
+        padding: 12px;
+        position: sticky;
+        bottom: 0;
+      }
+
+      .composer {
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        background: var(--surface);
+        padding: 10px;
+      }
+
+      .composer textarea {
+        width: 100%;
+        resize: vertical;
+        min-height: 78px;
+        max-height: 190px;
+        border: 0;
+        outline: 0;
+        color: var(--text);
+        background: transparent;
+        font: inherit;
+        line-height: 1.45;
+      }
+
+      .composer-footer {
+        margin-top: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+      }
+
+      .composer-help {
+        font-size: 0.77rem;
+        color: var(--text-muted);
+      }
+
+      .send-btn {
+        border: 1px solid transparent;
+        border-radius: 8px;
+        min-height: 36px;
+        padding: 0 14px;
+        background: var(--accent);
+        color: #fff;
+        font-size: 0.86rem;
+        font-weight: 560;
+        cursor: pointer;
+        transition: background 120ms ease;
+      }
+
+      .send-btn:hover:enabled {
+        background: #18495a;
+      }
+
+      .send-btn:disabled {
+        opacity: 0.7;
+        cursor: wait;
+      }
+
+      @media (max-width: 980px) {
+        .layout {
+          grid-template-columns: 1fr;
+          gap: 14px;
+          padding: 14px;
+        }
+
+        .sidebar {
+          order: 2;
+        }
+
+        .workspace {
+          order: 1;
+          min-height: calc(100vh - 180px);
+        }
+
+        .topbar-inner {
+          padding: 12px 14px;
+        }
+
+        .brand p {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="topbar-inner">
+          <div class="brand">
+            <h1>Security &amp; Compliance Copilot</h1>
+            <p>Grounded answers over NIST and CISA guidance.</p>
+          </div>
+          <div class="topbar-meta">
+            <span class="chip"><span class="chip-dot"></span>System healthy</span>
+            <span class="chip">MVP</span>
+          </div>
+        </div>
+      </header>
+
+      <div class="layout">
+        <aside class="sidebar">
+          <section class="card">
+            <h2>Knowledge Scope</h2>
+            <p>Public security and compliance guidance with source-grounded responses across NIST, CISA, AI governance, and cybersecurity controls.</p>
+          </section>
+
+          <section class="card">
+            <h2>System Behavior</h2>
+            <ul>
+              <li>Cites NIST and CISA sources.</li>
+              <li>Refuses unsupported or proprietary requests.</li>
+              <li>Provides guidance, not legal advice.</li>
+            </ul>
+          </section>
+
+          <section class="card">
+            <h2>Example Prompts</h2>
+            <div class="prompt-grid">
+              <button class="prompt-chip" data-prompt="Map NIST AI RMF govern functions to practical startup security controls.">Map NIST AI RMF governance to startup controls</button>
+              <button class="prompt-chip" data-prompt="Summarize CISA guidance relevant to securing retrieval-augmented AI systems.">Summarize CISA guidance for secure RAG systems</button>
+              <button class="prompt-chip" data-prompt="What controls reduce prompt injection and unsafe output risk in enterprise copilots?">Controls for prompt injection and unsafe output risk</button>
+            </div>
+          </section>
+        </aside>
+
+        <main class="workspace">
+          <section id="conversation" class="conversation">
+            <div id="empty-state" class="empty-state">
+              <h3>Grounded answers over public security guidance.</h3>
+              <p>Ask a focused question and review linked evidence. Responses include confidence, guardrail status, and source cards for fast validation.</p>
+              <div class="empty-prompts">
+                <button class="prompt-chip" data-prompt="What does NIST AI RMF recommend for governance roles and accountability?">NIST AI RMF governance roles</button>
+                <button class="prompt-chip" data-prompt="How should a startup operationalize CISA secure-by-design guidance?">CISA secure-by-design for startups</button>
+                <button class="prompt-chip" data-prompt="What is the difference between model risk and system risk in AI governance?">Model risk vs system risk</button>
+              </div>
+              <p>Answers are generated from retrieved public guidance only.</p>
+            </div>
+          </section>
+
+          <div class="composer-wrap">
+            <div class="composer">
+              <textarea id="question" placeholder="Ask a question about NIST, CISA, AI governance, cybersecurity, or compliance guidance."></textarea>
+              <div class="composer-footer">
+                <span class="composer-help">Enter to send • Shift+Enter for newline</span>
+                <button id="ask-button" class="send-btn" type="button">Send</button>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <script>
+      const button = document.getElementById("ask-button");
+      const question = document.getElementById("question");
+      const conversation = document.getElementById("conversation");
+      const emptyState = document.getElementById("empty-state");
+
+      function removeEmptyState() {
+        if (emptyState && emptyState.parentNode) {
+          emptyState.parentNode.removeChild(emptyState);
+        }
+      }
+
+      function toTitle(text) {
+        return String(text || "unknown").replace(/_/g, " ");
+      }
+
+      function statusClass(status) {
+        const value = String(status || "").toLowerCase();
+        if (value === "ok" || value === "high" || value === "medium") {
+          return "ok";
+        }
+        if (value === "insufficient_context" || value === "low") {
+          return "warn";
+        }
+        return "error";
+      }
+
+      function formatBackendError(payload, fallback) {
+        if (!payload) {
+          return fallback;
+        }
+        if (typeof payload.detail === "string" && payload.detail.trim()) {
+          return payload.detail;
+        }
+        if (Array.isArray(payload.detail) && payload.detail.length) {
+          return payload.detail
+            .map((item) => {
+              if (typeof item === "string") {
+                return item;
+              }
+              const location = Array.isArray(item.loc) ? item.loc.join(".") : "unknown";
+              const message = item.msg || JSON.stringify(item);
+              return `${location}: ${message}`;
+            })
+            .join(" | ");
+        }
+        if (typeof payload.message === "string" && payload.message.trim()) {
+          return payload.message;
+        }
+        return fallback;
+      }
+
+      async function parseErrorPayload(response) {
+        const rawText = await response.text();
+        if (!rawText) {
+          return { payload: null, message: `Request failed (${response.status}).` };
+        }
+        try {
+          const payload = JSON.parse(rawText);
+          return {
+            payload,
+            message: formatBackendError(payload, rawText)
+          };
+        } catch {
+          return { payload: null, message: rawText };
+        }
+      }
+
+      function renderSources(items) {
+        if (!Array.isArray(items) || !items.length) {
+          return `<p class="answer-text" style="color: var(--text-muted); margin: 0;">No source evidence returned.</p>`;
+        }
+        return `
+          <div class="sources-grid">
+            ${items
+              .map((item) => {
+                const label = item.label || "S?";
+                const framework = item.framework || "Unknown framework";
+                const publisher = item.publisher || "Public guidance";
+                const title = item.title || "Untitled source";
+                const score = Number(item.score);
+                const scoreText = Number.isFinite(score) ? score.toFixed(2) : "n/a";
+                const url = item.url || "";
+                return `
+                  <article class="source-card">
+                    <div class="source-top">
+                      <span class="source-label">${label}</span>
+                      <span class="source-title">${title}</span>
+                    </div>
+                    <div class="source-meta">
+                      <span><strong>Framework:</strong> ${framework}</span>
+                      <span><strong>Publisher:</strong> ${publisher}</span>
+                      <span><strong>Score:</strong> ${scoreText}</span>
+                    </div>
+                    ${url ? `<a class="source-link" href="${url}" target="_blank" rel="noreferrer">${url}</a>` : ""}
+                  </article>
+                `;
+              })
+              .join("")}
+          </div>
+        `;
+      }
+
+      function appendUserMessage(text) {
+        removeEmptyState();
+        const card = document.createElement("article");
+        card.className = "message user";
+        card.innerHTML = `
+          <div class="message-head">
+            <span class="message-role">You</span>
+          </div>
+          <div class="answer-text">${text}</div>
+        `;
+        conversation.appendChild(card);
+        conversation.scrollTop = conversation.scrollHeight;
+      }
+
+      function appendAssistantMessage(payload) {
+        removeEmptyState();
+        const guardrail = payload.guardrail_status || "unknown";
+        const confidence = payload.confidence || "unknown";
+        const card = document.createElement("article");
+        card.className = "message assistant";
+        card.innerHTML = `
+          <div class="message-head">
+            <span class="message-role">Assistant</span>
+            <div class="message-meta">
+              <span class="status-pill ${statusClass(guardrail)}">Guardrail: ${toTitle(guardrail)}</span>
+              <span class="status-pill ${statusClass(confidence)}">Confidence: ${toTitle(confidence)}</span>
+            </div>
+          </div>
+          <div class="answer-text">${payload.answer || ""}</div>
+          <section class="sources-block">
+            <h4 class="sources-title">Evidence</h4>
+            ${renderSources(payload.sources || [])}
+          </section>
+        `;
+        conversation.appendChild(card);
+        conversation.scrollTop = conversation.scrollHeight;
+      }
+
+      function appendLoadingMessage() {
+        removeEmptyState();
+        const card = document.createElement("article");
+        card.className = "message assistant";
+        card.id = "loading-card";
+        card.innerHTML = `
+          <div class="message-head">
+            <span class="message-role">Assistant</span>
+            <div class="message-meta">
+              <span class="status-pill">Processing</span>
+            </div>
+          </div>
+          <div class="answer-text" style="color: var(--text-muted);">
+            Retrieving sources, applying guardrails, and preparing a grounded answer...
+          </div>
+        `;
+        conversation.appendChild(card);
+        conversation.scrollTop = conversation.scrollHeight;
+      }
+
+      function removeLoadingMessage() {
+        const loadingCard = document.getElementById("loading-card");
+        if (loadingCard && loadingCard.parentNode) {
+          loadingCard.parentNode.removeChild(loadingCard);
+        }
+      }
+
+      function setSendingState(isSending) {
+        button.disabled = isSending;
+        button.textContent = isSending ? "Sending..." : "Send";
+        question.disabled = isSending;
+      }
+
+      async function submitQuestion() {
+        const value = question.value.trim();
+        if (!value || button.disabled) {
+          return;
+        }
+
+        appendUserMessage(value);
+        question.value = "";
+        setSendingState(true);
+        appendLoadingMessage();
+
+        try {
+          const response = await fetch("/chat", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ question: value })
+          });
+          if (!response.ok) {
+            const { payload, message } = await parseErrorPayload(response);
+            console.error("Backend /chat error payload", payload || message);
+            throw new Error(message);
+          }
+          const payload = await response.json();
+
+          appendAssistantMessage(payload);
+        } catch (error) {
+          appendAssistantMessage({
+            answer: error.message || "Request failed.",
+            confidence: "low",
+            guardrail_status: "error",
+            sources: []
+          });
+        } finally {
+          removeLoadingMessage();
+          setSendingState(false);
+          question.focus();
+        }
+      }
+
+      function applyPrompt(promptText) {
+        question.value = promptText;
+        question.focus();
+      }
+
+      button.addEventListener("click", submitQuestion);
+
+      question.addEventListener("keydown", (event) => {
+        if (event.key === "Enter" && !event.shiftKey) {
+          event.preventDefault();
+          submitQuestion();
+        }
+      });
+
+      document.querySelectorAll(".prompt-chip").forEach((chip) => {
+        chip.addEventListener("click", () => {
+          applyPrompt(chip.dataset.prompt || chip.textContent || "");
+        });
+      });
+    </script>
+  </body>
+</html>

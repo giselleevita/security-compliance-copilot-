@@ -1,0 +1,6 @@
+{
+  "path": "data/raw/nist_sp_800_218a_genai_ssdf_profile.pdf",
+  "title": "Secure Software Development Practices for Generative AI and Dual-Use Foundation Models",
+  "framework": "other",
+  "chunk_count": 71
+}

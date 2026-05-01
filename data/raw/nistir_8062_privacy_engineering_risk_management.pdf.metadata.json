@@ -1,0 +1,13 @@
+{
+  "title": "NISTIR 8062: An Introduction to Privacy Engineering and Risk Management in Federal Systems",
+  "url": "https://nvlpubs.nist.gov/nistpubs/ir/2017/NIST.IR.8062.pdf",
+  "publisher": "NIST",
+  "framework": "other",
+  "source_type": "pdf",
+  "document_type": "guide",
+  "license_status": "government_publication",
+  "priority": "medium",
+  "content_format": "pdf",
+  "fetched_at": "2026-04-27T12:52:30.261373+00:00",
+  "local_path": "/Users/yusaf/RAG AGATA/data/raw/nistir_8062_privacy_engineering_risk_management.pdf"
+}

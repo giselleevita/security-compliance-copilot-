@@ -1,0 +1,13 @@
+{
+  "title": "Secure Software Development Practices for Generative AI and Dual-Use Foundation Models",
+  "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-218A.pdf",
+  "publisher": "NIST",
+  "framework": "other",
+  "source_type": "pdf",
+  "document_type": "guide",
+  "license_status": "government_publication",
+  "priority": "high",
+  "content_format": "pdf",
+  "fetched_at": "2026-04-27T12:51:41.012627+00:00",
+  "local_path": "/Users/yusaf/RAG AGATA/data/raw/nist_sp_800_218a_genai_ssdf_profile.pdf"
+}

@@ -1,0 +1,13 @@
+{
+  "title": "The NIST Cybersecurity Framework (CSF) 2.0",
+  "url": "https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.29.pdf",
+  "publisher": "NIST",
+  "framework": "NIST_CSF",
+  "source_type": "pdf",
+  "document_type": "framework",
+  "license_status": "government_publication",
+  "priority": "high",
+  "content_format": "pdf",
+  "fetched_at": "2026-04-27T12:52:08.600518+00:00",
+  "local_path": "/Users/yusaf/RAG AGATA/data/raw/nist_csf_2_0.pdf"
+}

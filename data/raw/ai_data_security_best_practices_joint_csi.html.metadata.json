@@ -1,0 +1,13 @@
+{
+  "title": "AI Data Security: Best Practices for Securing Data Used to Train & Operate AI Systems",
+  "url": "https://www.cisa.gov/resources-tools/resources/ai-data-security-best-practices-securing-data-used-train-operate-ai-systems",
+  "publisher": "NSA / CISA / FBI and partners",
+  "framework": "CISA",
+  "source_type": "html",
+  "document_type": "guide",
+  "license_status": "government_publication",
+  "priority": "high",
+  "content_format": "html",
+  "fetched_at": "2026-04-27T12:53:42.043810+00:00",
+  "local_path": "/Users/yusaf/RAG AGATA/data/raw/ai_data_security_best_practices_joint_csi.html"
+}

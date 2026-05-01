@@ -1,0 +1,6 @@
+{
+  "path": "data/raw/nist_adversarial_ml_taxonomy_100_2e2025.pdf",
+  "title": "Adversarial Machine Learning: A Taxonomy and Terminology of Attacks and Mitigations",
+  "framework": "NIST_AI_RMF",
+  "chunk_count": 358
+}

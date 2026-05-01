@@ -1,0 +1,13 @@
+{
+  "title": "Product Security Bad Practices",
+  "url": "https://www.cisa.gov/resources-tools/resources/product-security-bad-practices",
+  "publisher": "CISA",
+  "framework": "CISA",
+  "source_type": "html",
+  "document_type": "guide",
+  "license_status": "government_publication",
+  "priority": "medium",
+  "content_format": "html",
+  "fetched_at": "2026-04-27T12:52:41.240970+00:00",
+  "local_path": "/Users/yusaf/RAG AGATA/data/raw/cisa_product_security_bad_practices.html"
+}

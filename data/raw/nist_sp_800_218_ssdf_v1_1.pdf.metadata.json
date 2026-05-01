@@ -1,0 +1,13 @@
+{
+  "title": "Secure Software Development Framework (SSDF) Version 1.1: Recommendations for Mitigating the Risk of Software Vulnerabilities",
+  "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-218.pdf",
+  "publisher": "NIST",
+  "framework": "other",
+  "source_type": "pdf",
+  "document_type": "framework",
+  "license_status": "government_publication",
+  "priority": "high",
+  "content_format": "pdf",
+  "fetched_at": "2026-04-27T12:51:42.235513+00:00",
+  "local_path": "/Users/yusaf/RAG AGATA/data/raw/nist_sp_800_218_ssdf_v1_1.pdf"
+}

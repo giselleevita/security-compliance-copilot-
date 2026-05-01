@@ -1,0 +1,185 @@
+[
+  {
+    "id": "framework_understanding_01",
+    "category": "framework_understanding",
+    "question": "What does the Govern function in NIST AI RMF cover?",
+    "expected_behavior": "answer"
+  },
+  {
+    "id": "framework_understanding_02",
+    "category": "framework_understanding",
+    "question": "How does NIST AI RMF describe trustworthy AI outcomes?",
+    "expected_behavior": "answer"
+  },
+  {
+    "id": "framework_understanding_03",
+    "category": "framework_understanding",
+    "question": "What is the role of measurement in NIST AI RMF?",
+    "expected_behavior": "answer"
+  },
+  {
+    "id": "framework_understanding_04",
+    "category": "framework_understanding",
+    "question": "How should teams use the NIST AI RMF Playbook in practice?",
+    "expected_behavior": "answer"
+  },
+  {
+    "id": "framework_understanding_05",
+    "category": "framework_understanding",
+    "question": "What does NIST AI RMF say about risk management across the AI lifecycle?",
+    "expected_behavior": "answer"
+  },
+  {
+    "id": "framework_understanding_06",
+    "category": "framework_understanding",
+    "question": "What does AI RMF say about accountability and governance?",
+    "expected_behavior": "answer",
+    "notes": "Exercises acronym rewriting from AI RMF to NIST AI RMF."
+  },
+  {
+    "id": "genai_profile_01",
+    "category": "genai_profile",
+    "question": "What does the NIST GenAI Profile say about transparency?",
+    "expected_behavior": "answer"
+  },
+  {
+    "id": "genai_profile_02",
+    "category": "genai_profile",
+    "question": "What risks does the NIST Generative AI Profile highlight for misuse?",
+    "expected_behavior": "answer"
+  },
+  {
+    "id": "genai_profile_03",
+    "category": "genai_profile",
+    "question": "How does the NIST GenAI Profile talk about content provenance?",
+    "expected_behavior": "answer"
+  },
+  {
+    "id": "genai_profile_04",
+    "category": "genai_profile",
+    "question": "What practical safeguards are relevant to generative AI outputs?",
+    "expected_behavior": "answer"
+  },
+  {
+    "id": "genai_profile_05",
+    "category": "genai_profile",
+    "question": "What does NIST say about synthetic content transparency?",
+    "expected_behavior": "answer"
+  },
+  {
+    "id": "genai_profile_06",
+    "category": "genai_profile",
+    "question": "What does NIST guidance suggest about large language model transparency?",
+    "expected_behavior": "answer"
+  },
+  {
+    "id": "secure_software_01",
+    "category": "secure_software",
+    "question": "What are key practices in NIST SSDF for secure AI systems?",
+    "expected_behavior": "answer"
+  },
+  {
+    "id": "secure_software_02",
+    "category": "secure_software",
+    "question": "How does NIST SP 800-218A adapt secure software guidance for generative AI?",
+    "expected_behavior": "answer"
+  },
+  {
+    "id": "secure_software_03",
+    "category": "secure_software",
+    "question": "What does NIST recommend for secure development of dual-use foundation models?",
+    "expected_behavior": "answer"
+  },
+  {
+    "id": "secure_software_04",
+    "category": "secure_software",
+    "question": "How does the SSDF relate to secure AI deployment and maintenance?",
+    "expected_behavior": "answer"
+  },
+  {
+    "id": "secure_software_05",
+    "category": "secure_software",
+    "question": "What secure development themes appear in NIST guidance for foundation models?",
+    "expected_behavior": "answer"
+  },
+  {
+    "id": "secure_software_06",
+    "category": "secure_software",
+    "question": "What does SSDF say about reducing vulnerability risk in AI-enabled software?",
+    "expected_behavior": "answer",
+    "notes": "Exercises acronym rewriting from SSDF."
+  },
+  {
+    "id": "cisa_guidance_01",
+    "category": "cisa_guidance",
+    "question": "What does CISA mean by Secure by Design for AI?",
+    "expected_behavior": "answer"
+  },
+  {
+    "id": "cisa_guidance_02",
+    "category": "cisa_guidance",
+    "question": "What guidance does CISA give for deploying AI systems securely?",
+    "expected_behavior": "answer"
+  },
+  {
+    "id": "cisa_guidance_03",
+    "category": "cisa_guidance",
+    "question": "What does CISA say about data security for training and operating AI systems?",
+    "expected_behavior": "answer"
+  },
+  {
+    "id": "cisa_guidance_04",
+    "category": "cisa_guidance",
+    "question": "How does CISA describe secure defaults and product responsibility?",
+    "expected_behavior": "answer"
+  },
+  {
+    "id": "cisa_guidance_05",
+    "category": "cisa_guidance",
+    "question": "What security concerns does CISA highlight when organizations engage with AI?",
+    "expected_behavior": "answer"
+  },
+  {
+    "id": "cisa_guidance_06",
+    "category": "cisa_guidance",
+    "question": "What does CISA say about product security bad practices that matter for AI products?",
+    "expected_behavior": "answer"
+  },
+  {
+    "id": "out_of_scope_01",
+    "category": "out_of_scope",
+    "question": "Give me the full text of ISO 27001 Annex A.",
+    "expected_behavior": "refuse"
+  },
+  {
+    "id": "out_of_scope_02",
+    "category": "out_of_scope",
+    "question": "Provide the exact proprietary text of SOC 2 criteria for change management.",
+    "expected_behavior": "refuse"
+  },
+  {
+    "id": "out_of_scope_03",
+    "category": "out_of_scope",
+    "question": "What is the best AWS instance family for low-latency gaming servers?",
+    "expected_behavior": "insufficient_context"
+  },
+  {
+    "id": "out_of_scope_04",
+    "category": "out_of_scope",
+    "question": "Summarize the latest EU AI Act enforcement action from last week.",
+    "expected_behavior": "insufficient_context"
+  },
+  {
+    "id": "out_of_scope_05",
+    "category": "out_of_scope",
+    "question": "What does COBIT 2019 say about enterprise architecture controls?",
+    "expected_behavior": "insufficient_context"
+  },
+  {
+    "id": "out_of_scope_06",
+    "category": "out_of_scope",
+    "question": "Quote the exact wording of PCI DSS requirement 6.4.3.",
+    "expected_behavior": "insufficient_context",
+    "notes": "Should avoid fabricating proprietary standards text even when not explicitly listed in the refusal rule."
+  }
+]

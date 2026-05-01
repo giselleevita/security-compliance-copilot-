@@ -1,0 +1,13 @@
+{
+  "title": "Artificial Intelligence Risk Management Framework (AI RMF 1.0)",
+  "url": "https://nvlpubs.nist.gov/nistpubs/ai/nist.ai.100-1.pdf",
+  "publisher": "NIST",
+  "framework": "NIST_AI_RMF",
+  "source_type": "pdf",
+  "document_type": "framework",
+  "license_status": "government_publication",
+  "priority": "high",
+  "content_format": "pdf",
+  "fetched_at": "2026-04-27T12:50:56.025848+00:00",
+  "local_path": "/Users/yusaf/RAG AGATA/data/raw/nist_ai_rmf_1_0.pdf"
+}

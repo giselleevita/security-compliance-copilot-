@@ -1,0 +1,13 @@
+{
+  "title": "Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile",
+  "url": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf",
+  "publisher": "NIST",
+  "framework": "NIST_AI_RMF",
+  "source_type": "pdf",
+  "document_type": "profile",
+  "license_status": "government_publication",
+  "priority": "high",
+  "content_format": "pdf",
+  "fetched_at": "2026-04-27T12:51:13.695538+00:00",
+  "local_path": "/Users/yusaf/RAG AGATA/data/raw/nist_ai_rmf_genai_profile_600_1.pdf"
+}
