@@ -131,7 +131,9 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-3. Add `OPENAI_API_KEY` to `.env`.
+3. Add your API key to `.env`:
+   - For Gemini (default): Add `GEMINI_API_KEY` from https://aistudio.google.com/app/apikey
+   - For OpenAI (alternative): Add `OPENAI_API_KEY` and uncomment OpenAI settings
 
 ## Quick Start
 
@@ -276,6 +278,10 @@ Eval categories include:
 - `refuse`
 
 Tracked fields include retrieved chunk count, guardrail status, confidence, source frameworks, and answer length.
+
+## Development
+
+For detailed setup, testing, and contribution guidelines, see [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Current Scope
 
