@@ -1,7 +1,6 @@
 import re
 from pathlib import Path
 
-
 FRAMEWORK_KEYWORDS = {
     "nist": "NIST",
     "csf": "NIST CSF",

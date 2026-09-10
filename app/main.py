@@ -9,13 +9,13 @@ from app.api.chat import router as chat_router
 from app.api.health import router as health_router
 from app.api.ingest import router as ingest_router
 from app.core.config import get_settings
-from app.core.logging import configure_logging
-from app.core.middleware import RequestLoggingMiddleware
 from app.core.dependencies import (
     get_embedding_client,
-    get_vector_store,
     get_ingestion_pipeline,
+    get_vector_store,
 )
+from app.core.logging import configure_logging
+from app.core.middleware import RequestLoggingMiddleware
 
 configure_logging()
 logger = logging.getLogger(__name__)
