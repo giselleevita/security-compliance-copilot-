@@ -139,7 +139,7 @@ class GroundingValidator:
                 continue
             if "provided context" in lowered or "retrieved context" in lowered:
                 continue
-            if lowered.startswith("it is essential to consult") or lowered.startswith("consult the actual"):
+            if lowered.startswith(("it is essential to consult", "consult the actual")):
                 continue
             sentences.append(sentence)
         return sentences

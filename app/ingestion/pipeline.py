@@ -5,7 +5,11 @@ from pathlib import Path
 
 from app.ingestion.chunker import chunk_text
 from app.ingestion.cleaning import clean_text, infer_framework, infer_title
-from app.ingestion.loaders import list_supported_files, load_sidecar_metadata, load_text_from_file
+from app.ingestion.loaders import (
+    list_supported_files,
+    load_sidecar_metadata,
+    load_text_from_file,
+)
 from app.retrieval.embeddings import OpenAIEmbeddingClient
 from app.retrieval.vectorstore import SqliteVectorStore
 

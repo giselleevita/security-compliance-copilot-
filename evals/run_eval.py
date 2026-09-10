@@ -84,7 +84,7 @@ def evaluate_questions(
         response_error = None
         try:
             response = chat_service.answer_question(item["question"])
-        except Exception as exc:
+        except Exception as exc:  # noqa: BLE001 - eval harness records any failure
             response = None
             response_error = f"{type(exc).__name__}: {exc}"
         if response is None:

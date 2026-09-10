@@ -3,7 +3,11 @@ from pathlib import Path
 import pytest
 from fastapi.testclient import TestClient
 
-from app.core.dependencies import _get_last_ingest_at, _load_known_sources, get_health_status
+from app.core.dependencies import (
+    _get_last_ingest_at,
+    _load_known_sources,
+    get_health_status,
+)
 from app.main import app
 from app.models.source import SourceChunk
 from app.retrieval.query_rewriter import QueryRewriter

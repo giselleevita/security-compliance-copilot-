@@ -30,7 +30,7 @@ def test_chat_returns_unhandled_exception_detail(monkeypatch) -> None:
 def test_chat_returns_fallback_for_unknown_exception(monkeypatch) -> None:
     class UnknownFailureService:
         def answer_question(self, question: str, filters: dict[str, str] | None = None):
-            raise Exception("Unexpected chain failure")
+            raise Exception("Unexpected chain failure")  # noqa: TRY002 - simulates an unexpected error
 
     monkeypatch.setattr("app.api.chat.get_chat_service", lambda: UnknownFailureService())
     client = TestClient(app)

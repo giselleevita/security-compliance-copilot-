@@ -1,6 +1,5 @@
 import time
 from collections import defaultdict, deque
-from typing import Deque
 
 from fastapi import HTTPException, Request
 
@@ -12,7 +11,7 @@ RATE_LIMIT_WINDOW_SECONDS = 60
 
 class InMemoryRateLimiter:
     def __init__(self) -> None:
-        self._requests: dict[str, Deque[float]] = defaultdict(deque)
+        self._requests: dict[str, deque[float]] = defaultdict(deque)
 
     def check(self, key: str, limit: int, now: float | None = None) -> None:
         if limit <= 0:

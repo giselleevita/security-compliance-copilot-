@@ -1,5 +1,5 @@
-from dataclasses import dataclass
 import re
+from dataclasses import dataclass
 
 from app.models.chat import ConfidenceLevel, GuardrailStatus
 from app.models.source import SourceChunk

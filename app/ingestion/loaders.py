@@ -1,7 +1,6 @@
 import json
 from pathlib import Path
 
-
 SUPPORTED_SUFFIXES = {".md", ".txt", ".html", ".htm", ".pdf"}
 
 

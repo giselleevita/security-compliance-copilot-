@@ -2,8 +2,7 @@ import json
 from pathlib import Path
 
 from app.models.chat import ChatResponse
-from app.models.source import SourceChunk
-from app.models.source import SourceResult
+from app.models.source import SourceChunk, SourceResult
 from evals.run_eval import load_questions, run_evaluation
 
 
